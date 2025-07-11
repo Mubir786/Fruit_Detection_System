@@ -1,18 +1,19 @@
-import react from 'react';
+import react , {useState} from 'react';
 import Header from './Header';
 import AddContact from './AddContact';
 import ContactList from './ContactList';
-import ContactCard from './ContactCard';
-
 import './App.css';
 
+
 function App() {
+
+  const [Contact, setContact] = useState([]);
+
   return (
-    <div>
+    <div className="ui container">
       <Header/>
-      {/*<ContactList/>
       <AddContact/>
-      <ContactCard/>*/}
+      <ContactList Contact = {Contact}/>
     </div>
   );
 }
